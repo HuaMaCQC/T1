@@ -1,33 +1,21 @@
-.App {
-  text-align: center;
+/* @styled-jsx=scoped */
+.slide-fade-up-enter-active,
+.slide-fade-left-enter-active {
+    transition: all 300ms ease;
+}
+.slide-fade-up-leave-active,
+.slide-fade-left-leave-active {
+    transition: all 300ms ease;
+    /* transition: all 300ms cubic-bezier(1, 0.5, 0.8, 1); */
+}
+.slide-fade-up-enter,
+.slide-fade-up-leave-to {
+    transform: translateY(-100%);
+    opacity: 0;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-  pointer-events: none;
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.slide-fade-left-enter,
+.slide-fade-left-leave-to {
+    transform: translateX(-100%);
+    opacity: 0;
 }
